@@ -28,7 +28,12 @@ The encryption format is [rclone crypt](https://rclone.org/crypt/), so your sync
 - **Account required.** You need a Google account (a free one works; storage counts toward your Google quota) and your own free Google Cloud OAuth client (created once in about five minutes; the plugin walks you through it).
 - **Access scope.** The plugin requests `drive.file`: it can see only files it created itself. The rest of your Google Drive is invisible to it.
 
+- **Vault access.** To sync, the plugin lists and reads every file in the vault (except dot-files such as `.obsidian`) and writes files it downloads. Nothing outside the vault is touched.
+- **Clipboard.** The plugin only *writes* to the clipboard: the Google sign-in code, when you press “Copy code and open Google”. It never reads the clipboard.
+
 Privacy policy: <https://mooncodee.github.io/crypt-drive-sync/privacy.html>
+
+Release builds are produced by GitHub Actions from this repository and carry [build provenance attestations](https://github.com/mooncodee/crypt-drive-sync/attestations): `gh attestation verify main.js -R mooncodee/crypt-drive-sync`.
 
 ## How it works
 

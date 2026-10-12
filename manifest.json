@@ -1,7 +1,7 @@
 {
 	"id": "crypt-drive-sync",
 	"name": "Crypt Drive Sync",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"minAppVersion": "1.13.2",
 	"description": "Sync your vault across devices through your own Google Drive, end-to-end encrypted and compatible with rclone crypt.",
 	"author": "mooncodee",
