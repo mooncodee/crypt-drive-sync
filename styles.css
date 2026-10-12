@@ -1,0 +1,51 @@
+.cds-pre {
+	white-space: pre-wrap;
+	word-break: break-all;
+	max-height: 40vh;
+	overflow: auto;
+	font-size: var(--font-ui-smaller);
+}
+
+.cds-code {
+	font-family: var(--font-monospace);
+	font-size: 2em;
+	letter-spacing: 0.1em;
+	text-align: center;
+	margin: var(--size-4-4) 0;
+	user-select: all;
+}
+
+.cds-pre-line {
+	white-space: pre-line;
+}
+
+.cds-wizard-status:empty {
+	display: none;
+}
+
+.cds-status {
+	gap: var(--size-2-2);
+}
+
+.cds-status-icon {
+	display: inline-flex;
+}
+
+.cds-status-icon svg {
+	width: var(--icon-xs);
+	height: var(--icon-xs);
+}
+
+.cds-status.is-running .cds-status-icon {
+	animation: cds-pulse 1s ease-in-out infinite;
+}
+
+@keyframes cds-pulse {
+	50% {
+		opacity: 0.3;
+	}
+}
+
+.cds-steps li {
+	margin-bottom: var(--size-4-2);
+}

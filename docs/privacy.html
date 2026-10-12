@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy · Crypt Drive Sync</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Privacy policy</h1>
+<p class="muted">Crypt Drive Sync, an Obsidian plugin · Last updated: 12 October 2026</p>
+
+<h2>Summary</h2>
+<p>Crypt Drive Sync runs entirely on your devices. The developer operates no server and collects no data. Your notes are encrypted on your device before they are sent to your own Google Drive.</p>
+
+<h2>What data the plugin handles, and where</h2>
+<ul>
+<li><strong>Your notes and attachments</strong> are encrypted on your device with a key derived from your password. Only the encrypted files are uploaded to <em>your</em> Google Drive. Google cannot read file names or contents.</li>
+<li><strong>Your encryption password</strong> is stored only on the device, in Obsidian's secret storage. It is never transmitted.</li>
+<li><strong>Your Google sign-in token</strong> is stored only on the device, in Obsidian's secret storage. It is sent only to Google, to access Google Drive.</li>
+<li><strong>Sync state</strong> (which files were last synced: paths, sizes, times) is stored only on the device, inside the vault's plugin folder.</li>
+</ul>
+
+<h2>Google user data</h2>
+<p>Each user connects the plugin to Google through an OAuth client they create in their own Google Cloud project. This policy describes how the plugin uses that access, whoever owns the client.</p>
+<p>The plugin requests the <code>https://www.googleapis.com/auth/drive.file</code> scope. It can access only the files it created itself; the rest of your Google Drive is not visible to it. It uses this access solely to store, list, read and move its own encrypted files, for the sync you asked for.</p>
+<p>Google user data is not transferred to the developer or to any third party, not used for advertising, not sold, and not used to train any model. The use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Network connections</h2>
+<p>The plugin connects only to <code>oauth2.googleapis.com</code> (sign-in) and <code>www.googleapis.com</code> (Google Drive API). There is no analytics, telemetry, advertising, or crash reporting.</p>
+
+<h2>Removing access and data</h2>
+<ul>
+<li>Sign out in the plugin settings, and revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+<li>Delete the plugin's folder in your Google Drive to remove the encrypted copy.</li>
+<li>In the plugin settings choose Advanced → “Reset setup on this device”: this removes the password, the Google sign-in and the client secret from the device. Then uninstall the plugin to remove its settings and sync state.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Questions: <a href="https://github.com/mooncodee/crypt-drive-sync/issues">GitHub issues</a>.</p>
+
+<h2 lang="ru">Кратко по-русски</h2>
+<p lang="ru">Плагин работает только на ваших устройствах; у разработчика нет сервера, и он не получает никаких данных. Заметки шифруются на устройстве и хранятся в вашем Google Drive. Пароль и вход в Google хранятся только на устройстве. Плагин видит в Drive лишь созданные им файлы и обращается только к серверам Google. Аналитики и рекламы нет. Отозвать доступ: myaccount.google.com/permissions.</p>
+</main>
+</body>
+</html>
